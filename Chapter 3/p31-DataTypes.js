@@ -172,8 +172,31 @@ alert(isNaN(true)); // false, can be converted to 1
 		var num2 = parseInt(""); 			//NaN
 		var num3 = parseInt("0xA"); 		//10 (hexadecimal)
 		var num4 = parseInt(22.5);			//22
-		var num5 = parseInt("70");
+		var num5 = parseInt("70");			//70 (decimal)
 
+	//parseInt provides radix as second argument. radix = number of digits to use in particular format
+	//radix inclusion is good practice, for reader clarity and guaranteed behavior
+		
+		var num1 = parseInt("10", 2); //2 - parsed as binary
+		var num2 = parseInt("10", 8); //8 - parsed as octal
+		var num3 = parseInt("10", 10);//10- parsed as decimal
+		var num4 = parseInt("10", 16);//16- parsed as hexidecimal
+
+
+	//parseFloat() is similar to parseInt, but accepts floating point characters.
+	//stops parsing when invalid floating point character reached
+
+		var num1 = parseFloat("12345blue");	//12345 - integer
+		var num2 = parseFloat("0xA");		//0 - hexidecimals always become 0
+		var num3 = parseFloat("22.5");		//22.5
+		var num4 = parseFloat("22.34.5");	//22.34
+		var num5 = parseFloat("0908.5");	//908.5
+		var num6 = parseFloat("3.125e7"); 	//31250000
+
+
+//The String Type!
+
+		
 
 
 
