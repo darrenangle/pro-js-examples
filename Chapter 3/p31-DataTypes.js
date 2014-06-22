@@ -124,8 +124,56 @@ var eNum = 3.125e7;
 
 alert(NaN === NaN); //false
 
-// isNan() function accepts argument of any data type, tests if NaN.
+// isNaN() function accepts argument of any data type, tests if NaN.
 // Any value that cannot be converted to a number returns true
+alert(isNaN(Nan)); //true
+alert(isNaN(10));  //false, 10 is a number
+alert(isNaN("10"));//false, can be converted to number 10
+alert(isNaN("blue")); // true, cannot be converted to a number
+alert(isNaN(true)); // false, can be converted to 1
+
+
+//Number conversions
+
+	//Booleans get converted to 1 (true) and 0 (false)
+	var num1 = Number(true); //1
+	var num1 = Number(false);//0
+
+	//Numbers get passed through and returned
+	var num2 = Number(11); 
+
+	//null returns 0
+	var num3 = Number(null); //0
+
+	//undefined returns NaN
+	var num4 = Number(undefined); // NaN
+
+	//Strings depend on the string
+
+		//strings containing only numbers convert to decimal number, leading 0's ignored
+		var num5 = Number("123"); //123
+
+		//strings containing floating points convert to floating points
+		var num6 = Number("1.1"); //1.1
+
+		//strings containing hexidecimal formats get converted to integer matching hex
+		var num7 = Number("0xf"); //15
+
+		//empty strings are converted to 0
+		var num8 = Number(""); //0
+
+		//if string contains anything else, its converted to NaN
+
+	//Number() has a lot of fucked symptoms, so use parseInt instead, when dealing with integers. 
+	//parseInt first character must be a number, + or - sign, if string
+	//stops at first non-numeric and returns preceding integer 22.5 --> 22 (because .)
+
+		var num1 = parseInt("12345blue"); 	//12345
+		var num2 = parseInt(""); 			//NaN
+		var num3 = parseInt("0xA"); 		//10 (hexadecimal)
+		var num4 = parseInt(22.5);			//22
+		var num5 = parseInt("70");
+
 
 
 
