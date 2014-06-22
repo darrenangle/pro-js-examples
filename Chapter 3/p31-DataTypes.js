@@ -89,7 +89,43 @@ var intNum = 666;
 
 var octalNum1 = 070; //valid
 var octalNum2 = 079; //not an octal, interpreted as 79 (octal 0, 1-7)
+var octalNum3 = 08;  //invalid - interpreted as 8
 
+
+//Floating-Point Values
+
+var floatNum1 = 1.1;
+var floatNum2 = 0.1;
+var floatNum3 = .1; //valid, but not advisable
+
+//storing floating points uses 2x memory, so ECMAscript converts to integers when possible
+
+var floatNum1 = 1.; //converts to 1
+var floatNum2 = 10.0; // converts to 10
+
+//very large or small numbers can youse e-notation (*10^p) 
+
+var eNum = 3.125e7;
+
+//Floating point inaccuracy in arithmetic
+0.1 + 0.2 !== 0.3; // true 
+
+//Big.js if absolutely necessary, otherwise dont test for specific floating point values. Round!
+
+
+
+
+//NaN
+
+//Used to indicate when an operation intedned to return a number has failed- instead of throwing an error
+//dividing by zero creates a NaN, but allows processing to continue
+
+//NaN is not equal to any value, including Nan
+
+alert(NaN === NaN); //false
+
+// isNan() function accepts argument of any data type, tests if NaN.
+// Any value that cannot be converted to a number returns true
 
 
 
