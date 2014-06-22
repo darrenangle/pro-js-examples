@@ -79,6 +79,16 @@ if (!nope){
 	alert('nope is false!')
 } 
 
+//Number type
+
+//integer type / floating point decimal 
+
+var intNum = 666;
+
+//octal number format, not allowed in strict mode
+
+var octalNum1 = 070; //valid
+var octalNum2 = 079; //not an octal, interpreted as 79 (octal 0, 1-7)
 
 
 
